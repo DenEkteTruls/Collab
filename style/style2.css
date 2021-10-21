@@ -156,8 +156,8 @@ body
     display: flex;
     flex-direction: row;
     height: 50vh;
-    margin-left: 8vw;
-    margin-right: 8vw;
+    margin-left: 5em;
+    margin-right: 5em;
     margin-top: 2em;
     gap: 2em;
     padding: 10px;
