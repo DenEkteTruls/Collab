@@ -155,6 +155,7 @@ body
 {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     height: 50vh;
     margin-left: 5em;
     margin-right: 5em;
