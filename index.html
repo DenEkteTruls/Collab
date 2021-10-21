@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Grid users</title>
+        <link href="style/style2.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!-------- NAVBAR -------->
+        <div class="navbar">
+            <div class="navbar-logo">
+                <h3 class="pointer" onclick="window.location.replace('index.html')">chattey</h3>
+            </div>
+            <div class="navbar-content">
+                <a href="#">Home</a>
+                <a href="user_grid.html">People</a>
+                <a href="#">Popular topics</a>
+                <a href="#">Community</a>
+                <a href="#">Developers</a>
+                <a href="#">Report</a>
+            </div>
+            <div class="navbar-login">
+                <button class="not-active-button pointer">Logg inn</button>
+                <button class="active-button pointer">Ny bruker</button>
+            </div>
+        </div>
+        <!-------- TOPIC SEARCH -------->
+
+        <div class="topic-search">
+            <div class="search-section">
+                <h2 class="search-title">Get cool <br>friends</h2>
+                <p class="search-subtext">Chattey is the easiest place to get new friends. Search to explore!</p>
+                <div class="search-input">
+                    <input type="text" placeholder="Search for topics"/>
+                    <button onclick="console.log('Searching');" class="pointer">Search</button>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="media/four friends hugging.png">
+            </div>
+        </div>
+
+        <!-------- INFO-BRANCH -------->
+        <div class="info-branch">
+            <div class="element">
+                <h1 class="info-content">0</h1>
+                <p class="info-subtext">Registered users</p>
+            </div>
+            <div class="element">
+                <h1 class="info-content">0</h1>
+                <p class="info-subtext">Active users</p>
+            </div>
+            <div class="element">
+                <h1 class="info-content">100+</h1>
+                <p class="info-subtext">Countries supported</p>
+            </div>
+        </div>
+    </body>
+    <script src="js/navbar.js"></script>
+</html>
