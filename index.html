@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Collab</title>
+        <link href="css/style.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!------- NAVBAR ------->
+        <div class="navbar">
+            <div class="logo-container">
+                <h3 class="pointer" onclick="window.location.replace('index.html');">Collab</h3>
+            </div>
+            <div class="content-container">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="#">Community</a>
+                <a href="#">Developers</a>
+                <a href="#">Report</a>
+            </div>
+            <div class="login-container">
+                <button class="not-active-button pointer">Sign in</button>
+                <button class="active-button pointer">Create new</button>
+            </div>
+        </div>
+        <div class="seperation-line"></div>
+        <!------- Informatino Branch ------->
+        <div class="start-container">
+            <div class="text">
+                <h3>Welcome to <br>Collab!</h3>
+                <p>Collab is 100% free and secure private and public collaberation rooms. Try it out now.</p>
+                <div class="get-started">
+                    <input id="get-started-text" class="text-entry get-started-width" type="text" placeholder="Username"/>
+                    <button class="active-button big-button pointer round-button gradient" onclick="try_now()">Start</button>
+                </div>
+            </div>
+            <div class="image">
+                <img src="media/main.gif">
+            </div>
+        </div>
+        <!------- Stats ------->
+        <div class="stats gradient">
+            <div class="element">
+                <h3>0</h3>
+                <p>Active users</p>
+            </div>
+            <div class="element">
+                <h3 id="registered-users">0</h3>
+                <p>Registered users</p>
+            </div>
+            <div class="element">
+                <h3>100+</h3>
+                <p>Supported countries</p>
+            </div>
+        </div>
+        <!------- Footer ------->
+        <div class="footer">
+            <div class="socials">
+                <h3>Collab</h3>
+                <!-- social media icons here ...-->
+            </div>
+            <div class="list">
+                <p>Support</p>
+                <a href="#">Contact us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Downloads</a>
+                <a href="#">Minimum Specs</a>
+                <a href="#">How it works</a>
+            </div>  
+            <div class="list">
+                <p>Collab</p>
+                <a href="#">About Collab</a>
+                <a href="#">Collab design</a>
+                <a href="#">Careers</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Collab Access</a>
+            </div>
+            <div class="contact">
+                <p>Stay up to date with new features from Collab.</p>
+                <input class="text-entry small-text-entry" type="email" placeholder="Email">
+                <button class="active-button pointer green-fade">Sign Up</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/script.js"></script>
+</html>

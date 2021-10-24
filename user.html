@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="no">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Collab</title>
+        <link href="css/user.css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!------- NAVBAR ------->
+        <div class="navbar">
+            <div class="logo-container">
+                <h3 class="pointer" onclick="window.location.replace('index.html');">Collab</h3>
+            </div>
+            <div class="content-container">
+                <a href="index.html">Home</a>
+                <a href="people.html">People</a>
+                <a href="#">Community</a>
+                <a href="#">Developers</a>
+                <a href="#">Report</a>
+            </div>
+            <div class="login-container">
+                <button class="not-active-button pointer">Sign in</button>
+                <button class="active-button pointer">Create new</button>
+            </div>
+        </div>
+        <div class="seperation-line"></div>
+        <!------- User container ------->
+        <div class="user-container">
+            <img id="user-image">
+            <div class="user-info">
+                <h3 id="username"></h3>
+                <p id="subtext"></p>
+                <p id="description"></p>
+            </div>
+            <div class="user-buttons">
+                <button id="button-add-friend" class="active-button round-button medium-size pointer">Add Friend</button>
+                <button id="button-join" class="active-button round-button medium-size pointer">Join</button>
+                <button id="button-invite" class="active-button round-button medium-size pointer">Invite</button>
+                <button id="button-chat" class="active-button round-button medium-size pointer">Chat</button>
+            </div>
+        </div>
+        <!------- Footer ------->
+        <div class="footer">
+            <div class="socials">
+                <h3>Collab</h3>
+                <!-- social media icons here ...-->
+            </div>
+            <div class="list">
+                <p>Support</p>
+                <a href="#">Contact us</a>
+                <a href="#">FAQ</a>
+                <a href="#">Downloads</a>
+                <a href="#">Minimum Specs</a>
+                <a href="#">How it works</a>
+            </div>  
+            <div class="list">
+                <p>Collab</p>
+                <a href="#">About Collab</a>
+                <a href="#">Collab design</a>
+                <a href="#">Careers</a>
+                <a href="#">Newsroom</a>
+                <a href="#">Collab Access</a>
+            </div>
+            <div class="contact">
+                <p>Stay up to date with new features from Collab.</p>
+                <input class="text-entry small-text-entry" type="email" placeholder="Email">
+                <button class="active-button pointer green-fade">Sign Up</button>
+            </div>
+        </div>
+    </body>
+    <script src="js/user.js"></script>
+</html>

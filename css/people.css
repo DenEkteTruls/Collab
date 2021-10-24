@@ -1,0 +1,84 @@
+
+@import url("style.css");
+
+
+/* ---------- Searching ---------- */
+
+#search-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--max-width) * 0.7);
+    column-gap: 1em;
+    padding: 2em;
+    margin: 4em auto 0 auto;
+}
+
+/* ---------- People ---------- */
+
+
+#people-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--max-width) * 0.9);
+    column-gap: 2em;
+    row-gap: 2em;
+    margin: 1em auto 3em auto;
+    padding: 2em;
+}
+
+#people-container > .user
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 10em;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2em;
+    background-color: whitesmoke;
+    transition: all 0.2s ease;
+}
+
+#people-container > .user:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+#people-container > .user > img
+{
+    object-fit: cover;
+    height: 6em;
+    width: auto;
+    padding: 1em 1em 0.2em 1em;
+    border-radius: 50%;
+}
+
+#people-container > .user > p
+{
+    color: var(--subtext);
+    margin: 0 0 0.1em 0;
+    font-size: 0.7em;
+    padding: 0;
+}
+
+#people-container > .user > h3
+{
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    height: 3em;
+    font-size: 0.9em;
+    margin-top: 0;
+}

@@ -1,0 +1,13 @@
+
+@import url("style.css");
+
+#settings
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--max-width) * 0.9);
+    margin: 0 auto;
+    column-gap: 1em;
+    margin: 20vh auto 20vh auto;
+}
