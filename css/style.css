@@ -7,7 +7,7 @@
     --subtext: rgb(109, 107, 107);
     --backgorund-color: white;
     --user-background-color: #fff;
-    --default-font: 'Menlo';
+    --default-font: 'Menlo', 'Roboto';
     --max-width: 1200px;
     --gradient-background: linear-gradient(45deg, var(--blue), var(--green));
     --gradient-background-90: linear-gradient(90deg, var(--normalblue), var(--green));
