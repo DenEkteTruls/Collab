@@ -4,6 +4,8 @@
         <meta charset="utf-8"/>
         <title>Collab</title>
         <link href="css/people.css" rel="stylesheet"/>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script src="js/firebase.js"></script>
     </head>
     <body>
         <!------- NAVBAR ------->
@@ -19,8 +21,8 @@
                 <a href="#">Report</a>
             </div>
             <div class="login-container">
-                <button class="not-active-button pointer">Sign in</button>
-                <button class="active-button pointer">Create new</button>
+                <button class="not-active-button pointer" onclick="window.location.replace('login.html');">Sign in</button>
+                <button class="active-button pointer" onclick="window.location.replace('register.html');">Create new</button>
             </div>
         </div>
         <div class="seperation-line"></div>
@@ -34,30 +36,32 @@
         <div id="people-container"></div>
         <!------- Footer ------->
         <div class="footer">
-            <div class="socials">
-                <h3>Collab</h3>
-                <!-- social media icons here ...-->
-            </div>
-            <div class="list">
-                <p>Support</p>
-                <a href="#">Contact us</a>
-                <a href="#">FAQ</a>
-                <a href="#">Downloads</a>
-                <a href="#">Minimum Specs</a>
-                <a href="#">How it works</a>
-            </div>  
-            <div class="list">
-                <p>Collab</p>
-                <a href="#">About Collab</a>
-                <a href="#">Collab design</a>
-                <a href="#">Careers</a>
-                <a href="#">Newsroom</a>
-                <a href="#">Collab Access</a>
-            </div>
-            <div class="contact">
-                <p>Stay up to date with new features from Collab.</p>
-                <input class="text-entry small-text-entry" type="email" placeholder="Email">
-                <button class="active-button pointer green-fade">Sign Up</button>
+            <div class="footer-container">
+                <div class="socials">
+                    <h3>Collab</h3>
+                    <!-- social media icons here ...-->
+                </div>
+                <div class="list">
+                    <p>Support</p>
+                    <a href="#">Contact us</a>
+                    <a href="#">FAQ</a>
+                    <a href="#">Downloads</a>
+                    <a href="#">Minimum Specs</a>
+                    <a href="#">How it works</a>
+                </div>  
+                <div class="list">
+                    <p>Collab</p>
+                    <a href="#">About Collab</a>
+                    <a href="#">Collab design</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Newsroom</a>
+                    <a href="#">Collab Access</a>
+                </div>
+                <div class="contact">
+                    <p>Stay up to date with new features from Collab.</p>
+                    <input class="text-entry small-text-entry" type="email" placeholder="Email">
+                    <button class="active-button pointer green-fade">Sign Up</button>
+                </div>
             </div>
         </div>
     </body>

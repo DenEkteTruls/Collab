@@ -3,7 +3,9 @@
     <head>
         <meta charset="utf-8"/>
         <title>Collab</title>
-        <link href="css/collab_join.css" rel="stylesheet"/>
+        <link href="css/register-login.css" rel="stylesheet"/>
+        <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
+        <script src="js/firebase.js"></script>
     </head>
     <body>
         <!------- NAVBAR ------->
@@ -24,11 +26,17 @@
             </div>
         </div>
         <div class="seperation-line"></div>
-        <!------- Collab container ------->
-        <div id="settings">
-            <input type="text" id="settings-username" class="text-entry medium-width" placeholder="Username">
-            <input type="text" id="settings-room-code" class="text-entry medium-width" placeholder="Room Code">
-            <button id="settings-button" class="active-button big-button round-button green-fade pointer">Join</button>
+        <!------- User container ------->
+        <div class="register-container">
+            <div class="left-box">
+                <img src="media/assets/call_center.gif">
+            </div>
+            <div class="right-box">
+                <input type="text" class="text-entry full-entry-width" id="username" placeholder="Username"/>
+                <input type="text" class="text-entry full-entry-width" id="email" placeholder="Email"/>
+                <input type="password" class="text-entry full-entry-width" id="password" placeholder="Password"/>
+                <button class="active-button mid-big-button full-button-width mid-round-button pointer" onclick="register()">Register</button>
+            </div>
         </div>
         <!------- Footer ------->
         <div class="footer">
@@ -61,5 +69,5 @@
             </div>
         </div>
     </body>
-    <script src="js/collab_join.js"></script>
+    <script src="js/register.js"></script>
 </html>

@@ -16,7 +16,7 @@ function addUsersFromJson(filename)
         
             user.classList.add("user");
             user.classList.add("pointer");
-            user.setAttribute("onclick", "user_click('"+key.replace(" ", ".").toLowerCase()+"');");
+            user.setAttribute("onclick", "user_click('"+key.replaceAll(" ", ".").toLowerCase()+"');");
         
             image.src = value[2];
             subtext.innerHTML = String(value[0]);
@@ -34,7 +34,7 @@ function addUsersFromJson(filename)
 
 function user_click(username)
 {
-    window.location.replace("../user.html?"+username);
+    window.location.replace("user.html?"+username);
 }
 
 

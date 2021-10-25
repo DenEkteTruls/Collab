@@ -1,5 +1,5 @@
 
-var username = window.location.search.replace("?", "").replace(".", " ");
+var username = window.location.search.replace("?", "").replaceAll(".", " ");
 var username_element = document.getElementById("username");
 var subtext_element = document.getElementById("subtext");
 var description_element = document.getElementById("description");

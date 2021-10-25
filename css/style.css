@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&display=swap');
+
 :root
 {
     --blue: #1652f0;
@@ -144,11 +146,14 @@ body
     background-color: var(--blue);
 }
 
-.big-button { font-size: 1.3em; padding: 1em 1.5em 1em 1.5em; height: 78px; }
+.big-button { font-size: 1.3em; padding: 1em 1.5em 1em 1.5em; height: 79px; }
+.mid-big-button { font-size: 1.3em; padding: 1em 1.5em 1em 1.5em; height: 60px; }
 .round-button { border-radius: 30px; }
+.mid-round-button { border-radius: 20px; }
 .green-fade:hover { background-color: var(--green); }
 .hoverscale { transform: scale(1.05); }
 .medium-size { font-size: 1.2em; height: 2.5em; width: 100%; padding: 0.5em 1em 0.5em 1em; }
+.full-button-width { width: 100%; }
 
 /* -------------------- Text Entry ------------------------- */
 
@@ -169,6 +174,7 @@ body
 
 .get-started-width { width: 70%; }
 .searchbar-width { width: calc(var(--max-width) * 0.7); }
+.full-entry-width { width: 87%; }
 
 /* -------------------- GET STARTED INDEX ------------------------- */
 
@@ -215,12 +221,22 @@ body
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    column-gap: 1em;
+     /* column-gap: 1em; */
+    column-gap: 0;
+    padding-right: 2.5em;
 }
 
 .start-container .text .get-started > button
 {
     width: 30%;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.start-container .text #get-started-text
+{
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
 }
 
 
@@ -284,25 +300,31 @@ body
 
 .footer
 {
+    height: 20em;
+    background-color: black;
+    width: 100vw;
+    border-top: 1px solid var(--seperator-line);
+}
+
+.footer-container
+{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
-    border-top: 1px solid var(--seperator-line); 
-    height: 20em;
-    background-color: black;
-    width: 100vw;
+    width: calc(var(--max-width) * 0.9);
+    margin: 3.5em auto;
 }
 
 
-.footer > .socials
+.footer-container > .socials
 {
     display: flex;
     flex-direction: column;
 }
 
-.footer > .socials > h3
+.footer-container > .socials > h3
 {
     margin-top: 0;
     margin-bottom: 5em;
@@ -311,24 +333,24 @@ body
 }
 
 
-.footer > .list
+.footer-container > .list
 {
     display: flex;
     flex-direction: column;
 }
 
-.footer > .list > a
+.footer-container > .list > a
 {
     text-decoration: none;
     color: lightgray;
 }
 
-.footer > .list > a:hover
+.footer-container > .list > a:hover
 {
     color: var(--green);
 }
 
-.footer > .list > p
+.footer-container > .list > p
 {
     font-size: 1.2em;
     margin-top: 0;
@@ -336,7 +358,7 @@ body
     color: white;
 }
 
-.footer > .contact
+.footer-container > .contact
 {
     display: flex;
     flex-direction: column;
