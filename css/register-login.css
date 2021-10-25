@@ -78,3 +78,13 @@
 {
     margin-top: 2em;
 }
+
+#status
+{
+    color: white;
+    font-size: 0.8em;
+    margin: 0;
+}
+
+.red { color: red; }
+.green { color: var(--green); }
