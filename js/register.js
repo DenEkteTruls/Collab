@@ -11,7 +11,8 @@ function register()
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then((userCredential) => {
         userCredential.updateProfile({
-            "displayName": username.value
+            "displayName": username.value,
+            "photoURL": "no-user.png"
         });
         window.location.replace("index.html");
     })

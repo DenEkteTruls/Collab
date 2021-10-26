@@ -1,4 +1,6 @@
 
+var login_container = document.getElementById("login-container");
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
       console.log("Logged in");
@@ -9,8 +11,11 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-var login_container = document.getElementById("login-container");
-
+function getProfileImageURL(filename)
+{
+  firebase.storage().ref("profile-images/").child(filename).getDownloadURL()
+  .then((url) => { return final_url; });
+}
 
 function loggedIn(user)
 {
@@ -27,13 +32,10 @@ function loggedIn(user)
   image.id = "profile-image";
   image.setAttribute("onclick", "window.location.replace('settings.html');");
 
-  if(user.photoURL != undefined) {
-    image.src = user.photoURL;
-  } else {
-    image.src = "../media/no-user.png";
-  }
+  image.src = "media/"+user.photoURL;
+
   username.innerHTML = user.displayName;
-  logout.src = "../media/sign-out.png"
+  logout.src = "media/sign-out.png";
 
   login_container.appendChild(image);
   login_container.appendChild(username);

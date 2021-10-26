@@ -28,12 +28,22 @@
         <div class="settings-container">
             <h3 class="title">User settings</h3>
             <div class="editable">
-                <img id="profile-image">
-                <div class="profile-username">
-                    <h3>Username</h3>
-                    <input type="text" class="text-entry small-text-entry">
+                <div id="profile-image-container">
+                    <label>
+                        <img id="profile-image" class="pointer"></img>
+                        <input type="file" id="change-logo" name="avatar" accept="image/png, image/jpeg, image/jpg">
+                    </label>
                 </div>
-                <button id="profile-save-button" class="active-button round-button mid-big-button green-fade">Save</button>
+                <div class="profile-element">
+                    <h3>Username</h3>
+                    <input id="profile-username-entry" type="text" class="text-entry">
+                </div>
+                <div class="profile-element">
+                    <h3>Email</h3>
+                    <input id="profile-email-entry" type="email" class="text-entry">
+                </div>
+                <p id="status"></p>
+                <button id="profile-save-button" onclick="save_(event)" class="active-button pointer round-button mid-big-button green-fade">Save</button>
             </div>
         </div>
         <!------- Footer ------->

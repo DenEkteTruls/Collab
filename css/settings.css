@@ -9,7 +9,7 @@
     align-items: center;
     justify-content: space-evenly;
     max-width: calc(var(--max-width) * 0.9); 
-    margin: 0 auto;
+    margin: 5em auto 5em auto;
 }
 
 .title
@@ -17,21 +17,61 @@
     font-size: 1.6em;
 }
 
-.settings-container > .editable > #profile-image
+.settings-container > .editable
 {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    row-gap: 1em;
 }
 
-.settings-container > .editable > .profile-username > h3
+p
+{
+    margin: 0 auto;
+    padding: 0;
+    margin-bottom: 1em;
+}
+
+.settings-container > .editable > #profile-image-container
+{
+    width: 13em;
+    height: 13em;
+}
+
+.settings-container > .editable > #profile-image-container > label > input[type="file"]
+{
+    visibility:hidden;
+    width: 0;
+    height: 0;
+}
+
+.settings-container > .editable > #profile-image-container > label > img
+{
+    object-fit: cover;
+    max-width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.settings-container > .editable > #profile-image-container > label > img:hover
+{
+    outline: thin solid var(--green);
+    outline-width: 3px;
+    outline-offset: -1px;
+    transform: scale(1.07);
+}
+
+.settings-container > .editable > .profile-element > h3
 {
     margin: 0 0 0 0.5em;
 }
 
+.settings-container > .editable > .profile-element > .text-entry
 {
-.settings-container > .editable > .profile-username > input[type="text"]
-    
-}
-
-.settings-container > .editable > #button-save-profile
-{
-
+    width: 15em;
+    font-size: 1.2em;
 }

@@ -220,6 +220,7 @@ body
     border-radius: 20px;
 }
 
+.max-width { width: 100%; }
 .get-started-width { width: 70%; }
 .searchbar-width { width: calc(var(--max-width) * 0.7); }
 .full-entry-width { width: 87%; }
