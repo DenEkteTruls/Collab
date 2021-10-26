@@ -1,0 +1,37 @@
+
+@import url("style.css");
+
+
+.settings-container
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    max-width: calc(var(--max-width) * 0.9); 
+    margin: 0 auto;
+}
+
+.title
+{
+    font-size: 1.6em;
+}
+
+.settings-container > .editable > #profile-image
+{
+}
+
+.settings-container > .editable > .profile-username > h3
+{
+    margin: 0 0 0 0.5em;
+}
+
+{
+.settings-container > .editable > .profile-username > input[type="text"]
+    
+}
+
+.settings-container > .editable > #button-save-profile
+{
+
+}

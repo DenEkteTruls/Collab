@@ -96,6 +96,54 @@ body
     width: 20vw;
 }
 
+.loggedin-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    width: 20vw;
+    column-gap: 1em;
+}
+
+.loggedin-container > #profile-image
+{
+    object-fit: cover;
+    max-height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    transition: transform 0.2s ease;
+}
+
+.loggedin-container > #logout-button
+{
+    object-fit: cover;
+    max-height: 20px;
+    width: 20px;
+    transition: transform 0.1s ease;
+}
+
+.loggedin-container > #profile-image:hover
+{
+    outline: thin solid var(--green);
+    outline-width: 3px;
+    outline-offset: -1px;
+    transform: scale(1.07);
+}
+
+.loggedin-container > #logout-button:hover
+{
+    transform: scale(1.05);
+}
+
+.loggedin-container > h3
+{
+    font-size: 1.2em;
+    color: black;
+    font-weight: 600;
+}
+
 /* --------------------- SEPERATION LINE ------------------------ */
 
 .seperation-line

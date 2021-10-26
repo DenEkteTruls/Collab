@@ -1,15 +1,6 @@
 
-
-firebase.auth().onAuthStateChanged(function(user) {
-    if (user) {
-        console.log("Logged in");
-        console.log(user);
-    } else {
-        console.log("Not logged in");
-    }
-});
-
 var state = document.getElementById("status");
+
 
 function register()
 {
@@ -22,6 +13,7 @@ function register()
         userCredential.updateProfile({
             "displayName": username.value
         });
+        window.location.replace("index.html");
     })
     .catch((error) => {
         const errorCode = error.code;
@@ -32,3 +24,5 @@ function register()
         state.innerHTML = errorMessage;
     });
 }
+
+
