@@ -5,7 +5,7 @@
         <title>Collab</title>
         <link href="css/user.css" rel="stylesheet"/>
         <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
-        <script src="js/firebase.js"></script>
+        <script src="js/firebase_initialize.js"></script>
     </head>
     <body>
         <!------- NAVBAR ------->
@@ -20,9 +20,7 @@
                 <a href="#">Developers</a>
                 <a href="#">Report</a>
             </div>
-            <div class="login-container">
-                <button class="not-active-button pointer" onclick="window.location.replace('login.html');">Sign in</button>
-                <button class="active-button pointer" onclick="window.location.replace('register.html');">Create new</button>
+            <div id="login-container" class="">
             </div>
         </div>
         <div class="seperation-line"></div>
@@ -72,5 +70,6 @@
             </div>
         </div>
     </body>
+    <script src="js/firebase.js"></script>
     <script src="js/user.js"></script>
 </html>
