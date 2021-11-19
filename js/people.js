@@ -55,7 +55,8 @@ function readFile(filename, callback)
 function userSearch()
 {
     var input = document.getElementById("peopleSearchInput");
-    var filter = input.value.toUpperCase();
+    try { var filter = input.value.toUpperCase(); }
+    catch { var filter = ""; }
     var ul = document.getElementById("people-container");
     var li = ul.getElementsByClassName("user");
 
