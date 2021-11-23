@@ -1,5 +1,6 @@
 
 var state = document.getElementById("status");
+var database = firebase.database();
 
 
 function register()
@@ -10,11 +11,19 @@ function register()
     
     firebase.auth().createUserWithEmailAndPassword(email.value, password.value)
     .then((userCredential) => {
-        userCredential.updateProfile({
+        console.log(userCredential);
+        userCredential.user.updateProfile({
             "displayName": username.value,
             "photoURL": "no-user.png"
         });
-        window.location.replace("index.html");
+        database.ref("users/"+userCredential.user.uid).set({
+            'displayName': username.value,
+            'email': userCredential.user.email,
+            'photoURL': 'no-user.png'
+        });
+        window.setTimeout(() => {
+            window.location.replace("index.html");
+        }, 500);
     })
     .catch((error) => {
         const errorCode = error.code;
@@ -25,5 +34,3 @@ function register()
         state.innerHTML = errorMessage;
     });
 }
-
-

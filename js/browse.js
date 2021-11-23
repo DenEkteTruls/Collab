@@ -1,7 +1,9 @@
 
-function addBrowserItems()
-{
-    null; 
+function addBrowserItems() {
+    firebase.database().ref('users').on("value", function(snap) {
+        var code = snap.val();
+        console.log(code);
+    });
 }
 
 
@@ -27,7 +29,9 @@ function browseSearch()
 
 /* ----- STARTUP ----- */
 
-addBrowserItems();
+window.setTimeout(() => {
+    addBrowserItems();
+}, 1000);
 
 window.setInterval(() => {
     browseSearch();

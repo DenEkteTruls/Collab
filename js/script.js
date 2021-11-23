@@ -18,8 +18,6 @@ function readFile(filename, callback)
     rawFile.send(null);
 }
 
-
-
 var registered_users = document.getElementById("registered-users");
 
 readFile("users.json", function(data) {
