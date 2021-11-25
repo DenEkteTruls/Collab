@@ -32,7 +32,10 @@ function loggedIn(user)
   image.id = "profile-image";
   image.setAttribute("onclick", "window.location.replace('settings.html');");
 
-  image.src = "media/"+user.photoURL;
+  firebase.storage().ref("profile-images").child(user.photoURL).getDownloadURL()
+  .then((url) => {
+      image.src = url;
+  });
 
   username.innerHTML = user.displayName;
   logout.src = "media/sign-out.png";

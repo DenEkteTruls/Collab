@@ -1,4 +1,5 @@
 
+var database = firebase.database();
 
 function addUsersFromJson(filename)
 {
@@ -28,6 +29,41 @@ function addUsersFromJson(filename)
         
             people_container.appendChild(user);
         }
+    });
+}
+
+
+function addUsersFromDatabase()
+{
+    var people_container = document.getElementById("people-container");
+
+    database.ref("users").once("value", (snapshot) => {
+        snapshot.forEach((snap) => {
+            var val = snap.val();
+    
+            console.log(val.displayName);
+    
+            var user = document.createElement("div");
+            var image = document.createElement("img");
+            var subtext = document.createElement("p");
+            var username = document.createElement("h3");
+            
+            user.classList.add("user");
+            user.classList.add("pointer");
+            user.setAttribute("onclick", "user_click('"+val.displayName.replaceAll(" ", ".").toLowerCase()+"');");
+            firebase.storage().ref("profile-images").child(snap.key+".jpg").getDownloadURL()
+            .then((url) => {
+                image.src = url;
+            });
+            subtext.innerHTML = "nothing";
+            username.innerHTML = val.displayName;
+            
+            user.appendChild(image);
+            user.appendChild(subtext);
+            user.appendChild(username);
+            
+            people_container.appendChild(user);
+        });
     });
 }
 
@@ -75,7 +111,8 @@ function userSearch()
 
 /* ----- STARTUP ----- */
 
-addUsersFromJson();
+//addUsersFromJson();
+addUsersFromDatabase();
 
 
 window.setInterval(() => {

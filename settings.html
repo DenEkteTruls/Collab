@@ -30,8 +30,8 @@
             <div class="editable">
                 <div id="profile-image-container">
                     <label>
-                        <img id="profile-image" class="pointer"></img>
-                        <input type="file" id="change-logo" name="avatar" accept="image/png, image/jpeg, image/jpg">
+                        <img id="profile-image-main" class="pointer"></img>
+                        <input type="file" id="change-logo" onchange="changeProfileImage(event)" name="avatar" accept="image/png, image/jpeg, image/jpg">
                     </label>
                 </div>
                 <div class="profile-element">
