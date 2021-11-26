@@ -11,11 +11,6 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
-function getProfileImageURL(filename)
-{
-  firebase.storage().ref("profile-images/").child(filename).getDownloadURL()
-  .then((url) => { return final_url; });
-}
 
 function loggedIn(user)
 {

@@ -41,8 +41,6 @@ function addUsersFromDatabase()
         snapshot.forEach((snap) => {
             var val = snap.val();
     
-            console.log(val.displayName);
-    
             var user = document.createElement("div");
             var image = document.createElement("img");
             var subtext = document.createElement("p");
@@ -50,7 +48,7 @@ function addUsersFromDatabase()
             
             user.classList.add("user");
             user.classList.add("pointer");
-            user.setAttribute("onclick", "user_click('"+val.displayName.replaceAll(" ", ".").toLowerCase()+"');");
+            user.setAttribute("onclick", "user_click('"+snap.key+"');");
             firebase.storage().ref("profile-images").child(snap.key+".jpg").getDownloadURL()
             .then((url) => {
                 image.src = url;

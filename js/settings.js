@@ -10,7 +10,7 @@ var state = document.getElementById("status");
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-    firebase.storage().ref("profile-images").child(user.photoURL).getDownloadURL()
+    firebase.storage().ref("profile-images").child(user.uid+".jpg").getDownloadURL()
     .then((url) => {
         image.src = url;
     });
@@ -59,11 +59,6 @@ function save_(event)
         'displayName': username.value,
         'email': email.value
     });
-
-    /*
-    var file_ = event.target.files[0];
-    changeProfileImage(file_);
-    */
 }
 
 function changeProfileImage(event)

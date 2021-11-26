@@ -1,41 +1,35 @@
 
-var username = window.location.search.replace("?", "").replaceAll(".", " ");
+var database = firebase.database();
+
+var uid = window.location.search.replace("?", "");
+var username = undefined;
+var photoURL = undefined;
+
 var username_element = document.getElementById("username");
 var subtext_element = document.getElementById("subtext");
 var description_element = document.getElementById("description");
 var user_image = document.getElementById("user-image");
 var add_friend = document.getElementById("button-add-friend");
-
-username_element.innerHTML = username;
+var chat_Button = document.getElementById("button-chat");
 
 add_friend.onclick = function() {
     add_friend.style = "background-color: var(--green);";
     add_friend.innerHTML = "Requested";
 }
 
-readFile("users.json", function(raw) {
-    users = JSON.parse(raw);
-    for(var [key, value] of Object.entries(users))
-    {
-        if(key.toLowerCase() == username.toLowerCase()) {
-            user_image.src = value[2];
-            subtext_element.innerHTML = value[0];
-            description_element.innerHTML = value[1];
-        }
-    }
+database.ref("users").child(uid).on("value", (snap) => {
+    var val = snap.val();
+    username_element.innerHTML = val.displayName;
+    subtext_element.innerHTML = "norway";
+    description_element.innerHTML = "";
 });
 
-/* -------------------------- Functions ------------------------------- */
+firebase.storage().ref("profile-images").child(uid+".jpg").getDownloadURL()
+.then((url) => {
+    user_image.src = url;
+});
 
-function readFile(filename, callback)
-{
-    var rawFile = new XMLHttpRequest();
-    rawFile.overrideMimeType("application/json");
-    rawFile.open("GET", filename, true);
-    rawFile.onreadystatechange = function() {
-        if(rawFile.readyState == 4 && rawFile.status == 200) {
-            callback(rawFile.responseText);
-        }
-    }
-    rawFile.send(null);
+
+chat_Button.onclick = () => {
+    window.location.replace("chat.html?"+uid);
 }
