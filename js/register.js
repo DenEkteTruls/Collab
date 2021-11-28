@@ -13,13 +13,11 @@ function register()
     .then((userCredential) => {
         console.log(userCredential);
         userCredential.user.updateProfile({
-            "displayName": username.value,
-            "photoURL": "no-user.png"
+            "displayName": username.value
         });
         database.ref("users/"+userCredential.user.uid).set({
             'displayName': username.value,
-            'email': userCredential.user.email,
-            'photoURL': 'no-user.png'
+            'email': userCredential.user.email
         });
         window.setTimeout(() => {
             window.location.replace("index.html");
