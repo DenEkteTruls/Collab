@@ -1,0 +1,105 @@
+
+@import url("style.css");
+
+
+/* ---------- Searching ---------- */
+
+#search-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--max-width) * 0.7);
+    column-gap: 0;
+    padding: 2em;
+    margin: 4em auto 0 auto;
+}
+
+/* ---------- Browsing ---------- */
+
+#browse-container
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    max-width: calc(var(--max-width) * 0.9);
+    column-gap: 2em;
+    row-gap: 2em;
+    margin: 1em auto 3em auto;
+    padding: 2em;
+}
+
+#browse-container > .trail
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 25em;
+    height: auto;
+    box-sizing: border-box;
+    padding: 0 2em;
+    background-color: whitesmoke;
+    transition: all 0.2s ease;
+}
+
+#browse-container > .trail:hover
+{
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+.trail > .trail_left > img
+{
+    object-fit: cover;
+    max-width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 0.5em 0em 0.5em 0em;
+}
+
+.trail > .trail_right
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 3em 0 3em 0;
+}
+
+.trail > .trail_right > h3
+{
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.1em;
+}
+
+.trail > .trail_right > .trail_user
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.trail > .trail_right > .trail_user > img
+{
+    object-fit: cover;
+    max-width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin: 0.5em 0.5em 0.5em 0em;
+}
+
+.trail > .trail_right > .trail_user > p
+{
+    color: var(--subtext);
+    margin: 0 0 0.1em 0;
+    font-size: 0.8em;
+    padding: 0;
+}

@@ -52,7 +52,14 @@ function addUsersFromDatabase()
             firebase.storage().ref("profile-images").child(snap.key+".jpg").getDownloadURL()
             .then((url) => {
                 image.src = url;
+            })
+            .catch((error) => {
+                firebase.storage().ref("profile-images").child("no-user.png").getDownloadURL()
+                .then((url) => {
+                    image.src = url;
+                });
             });
+
             subtext.innerHTML = "nothing";
             username.innerHTML = val.displayName;
             

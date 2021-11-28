@@ -13,6 +13,12 @@ firebase.auth().onAuthStateChanged(function(user) {
     firebase.storage().ref("profile-images").child(user.uid+".jpg").getDownloadURL()
     .then((url) => {
         image.src = url;
+    })
+    .catch((error) => {
+        firebase.storage().ref("profile-images").child("no-user.png").getDownloadURL()
+        .then((url) => {
+            image.src = url;
+        });
     });
     username.value = user.displayName;
     email.value = user.email;
