@@ -27,9 +27,16 @@ function loggedIn(user)
   image.id = "profile-image";
   image.setAttribute("onclick", "window.location.replace('settings.html');");
 
-  firebase.storage().ref("profile-images").child(user.photoURL).getDownloadURL()
+  firebase.storage().ref("profile-images").child(user.uid+".jpg").getDownloadURL()
   .then((url) => {
       image.src = url;
+  })
+  .catch((error) => {
+    console.log("no phofile image");
+    firebase.storage().ref("profile-images").child("no-user.png").getDownloadURL()
+        .then((url) => {
+        image.src = url;
+      });
   });
 
   username.innerHTML = user.displayName;
