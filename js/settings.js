@@ -78,7 +78,16 @@ function changeProfileImage(event)
             'photoURL': user.uid+".jpg"
         });
         console.log("saved!");
+    })
+    .catch((error) => {
         firebase.storage().ref("profile-images").child(user.photoURL).getDownloadURL()
+        .then((url) => {
+            image.src = url;
+            document.getElementById("profile-image").src = url;
+        });
+    })
+    .catch((error) => {
+        firebase.storage().ref("profile-images").child("no-user.png").getDownloadURL()
         .then((url) => {
             image.src = url;
             document.getElementById("profile-image").src = url;
