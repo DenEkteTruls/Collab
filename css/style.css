@@ -19,8 +19,8 @@
 
 body
 {
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     font-family: var(--default-font);
     background-color: var(--backgorund-color);
     margin: 0 0;
@@ -41,8 +41,7 @@ body
     height: auto;
     margin: 0 auto;
     max-width: var(--max-width);
-    
-/*  ----- får ikke divvene til å få absolutte bredder -----
+/*
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -63,7 +62,8 @@ body
     color: var(--blue);
     font-size: 1.9em;
     font-weight: 600;
-    flex-basis: 20vw;
+    /* flex-basis: 20vw; */
+    flex: 0 0 20vw;
     height: 3em;
 }
 
@@ -75,7 +75,8 @@ body
     align-items: center;
     justify-content: center;
     column-gap: 2em;
-    flex-basis: 60vw;
+    flex: 0 1 60vw;
+    /* flex-basis: 60vw; */
 }
 
 .content-container > a
@@ -103,7 +104,8 @@ body
     flex-direction: row;
     flex-wrap: nowrap;
     column-gap: 1em;
-    flex-basis: 20vw;
+    /* flex-basis: 20vw; */
+    flex: 0 0 20vw;
 }
 
 .loggedin-container
@@ -113,7 +115,8 @@ body
     flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    flex-basis: 20vw;
+    /* flex-basis: 20vw; */
+    flex: 0 0 20vw;
     column-gap: 1em;
 }
 
