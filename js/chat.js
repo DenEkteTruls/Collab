@@ -16,6 +16,12 @@ database.ref("users").child(uid).on("value", (snap) => {
 firebase.storage().ref("profile-images").child(uid+".jpg").getDownloadURL()
 .then((url) => {
     friend_image.src = url;
+})
+.catch((error) => {
+    firebase.storage().ref("profile-images").child("no-user.png").getDownloadURL()
+    .then((url) => {
+        friend_image.src = url;
+    }) 
 });
 
 
