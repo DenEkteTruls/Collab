@@ -123,8 +123,8 @@ body
 .loggedin-container > #profile-image
 {
     object-fit: cover;
-    max-width: 60px;
-    height: 60px;
+    max-width: 50px;
+    height: 50px;
     border-radius: 50%;
     transition: transform 0.2s ease;
 }
@@ -241,7 +241,7 @@ body
 .full-entry-width { width: 87%; }
 .flat-right { border-top-right-radius: 0; border-bottom-right-radius: 0; }
 .flat-left { border-top-left-radius: 0; border-bottom-left-radius: 0; }
-.message-wide { width: 100%; }
+.message-wide { width: 100%; padding: 0 10px; }
 
 /* -------------------- GET STARTED INDEX ------------------------- */
 

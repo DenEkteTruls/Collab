@@ -1,6 +1,9 @@
 @import url("style.css");
 
-
+:root
+{
+    --message-box-width: 300px;
+}
 
 .chat-container
 {
@@ -14,6 +17,8 @@
     border-radius: 30px;
     background-color: whitesmoke;
 }
+
+
 
 /*
 ----------- TOP BAR ----------
@@ -61,8 +66,27 @@
 
 #message-box
 {
-    min-height: 300px;
+    min-height: var(--message-box-width);
     width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 1em 0;
+}
+
+.message
+{
+    margin: 0.5em 0;
+    padding: 0.1em 1.7em;
+    background-color: white;
+    font-size: 0.7em;
+    border-radius: 10px;
+    width: fit-content;
+}
+
+.message-text
+{
+    font-size: 1.4em;
 }
 
 

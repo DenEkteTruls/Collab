@@ -25,10 +25,25 @@ firebase.storage().ref("profile-images").child(uid+".jpg").getDownloadURL()
 });
 
 
+function new_message(message, time)
+{
+    var mbox = document.getElementById("message-box");
+    var div = document.createElement("div");
+    var p = document.createElement("p");
+
+    p.innerHTML = message;
+    p.className = "message-text";
+    div.className = "message";
+
+    div.appendChild(p);
+    mbox.appendChild(div);
+}
+
+
 function send_message()
 {
     var message = entry.value;
     var time = Date.now();
 
-    document.write(message, time);      
+    new_message(message, time);
 }
